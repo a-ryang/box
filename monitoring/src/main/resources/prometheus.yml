@@ -1,0 +1,14 @@
+global:
+  scrape_interval: 15s # 15초 마다 Metric을 Pulling
+  evaluation_interval: 15s # 룰 검증 빈도. 기본은 1분 마다.
+
+# scraping 할 엔드포인트가 하나 포함된 scrape 설정
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['host.docker.internal:9090']
+  - job_name: 'spring-actuator'
+    metrics_path: '/actuator/prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['host.docker.internal:8080']
