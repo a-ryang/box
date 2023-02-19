@@ -16,3 +16,9 @@ docker-compose up -d
 # 볼륨 제거
 docker-compose down --volumes
 ```
+
+## ⚠️
+
+환경에 맞게 `/src/main/resources/prometheus.yml` 수정하기
+
+https://docs.docker.com/config/daemon/prometheus/#configure-and-run-prometheus
