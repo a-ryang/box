@@ -1,1 +1,1 @@
-# spring-boot-box
+# 📦 box
